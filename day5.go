@@ -10,8 +10,6 @@ import (
 
 // Note: this is the my second implementation, go back in history to see previous, uglier solution, thanks to @benharri for inspo
 
-const rows = 128
-
 func day5s1() {
 	seatIDs := *getSeatIDList()
 	fmt.Printf("highest: %d\n", seatIDs[len(seatIDs)-1])
