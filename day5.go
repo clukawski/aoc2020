@@ -8,15 +8,15 @@ import (
 	"strings"
 )
 
+var seatIDs = *getSeatIDList()
+
 // Note: this is the my second implementation, go back in history to see previous, uglier solution, thanks to @benharri for inspo
 
 func day5s1() {
-	seatIDs := *getSeatIDList()
 	fmt.Printf("highest: %d\n", seatIDs[len(seatIDs)-1])
 }
 
 func day5s2() {
-	seatIDs := *getSeatIDList()
 	seat := (len(seatIDs)+1)*(seatIDs[0]+seatIDs[len(seatIDs)-1])/2 - sum(seatIDs)
 	fmt.Printf("my seat: %d\n", seat)
 }
